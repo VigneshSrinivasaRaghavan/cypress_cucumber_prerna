@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
 
 Given('I am on the login page', function () {
@@ -5,11 +7,11 @@ Given('I am on the login page', function () {
 })
 
 When('I enter username', function () {
-    cy.get('input[placeholder="Username"]').type("Admin");
+    cy.get('input[name="username"]').type("Admin");
 })
 
 When('I enter password', function () {
-    cy.get('input[placeholder="Password"]').type("admin123");
+    cy.get('input[name="password"]').type("admin123");
 })
 
 When('I click on login button', function () {
