@@ -6,12 +6,12 @@ Given('I am on the login page', function () {
     cy.visit('https://opensource-demo.orangehrmlive.com/');
 })
 
-When('I enter username', function () {
-    cy.get('input[name="username"]').type("Admin");
+When('I enter username', function (dataTable) {
+    cy.get('input[name="username"]').type(dataTable.rawTable[1][0]);
 })
 
-When('I enter password', function () {
-    cy.get('input[name="password"]').type("admin123");
+When('I enter password', function (dataTable) {
+    cy.get('input[name="password"]').type(dataTable.rawTable[1][0]);
 })
 
 When('I click on login button', function () {
