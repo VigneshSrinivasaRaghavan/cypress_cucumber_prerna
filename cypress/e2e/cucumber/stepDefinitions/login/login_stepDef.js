@@ -7,7 +7,7 @@ Given('I am on the login page', function () {
 })
 
 When('I enter username', function (dataTable) {
-    cy.get('input[name="username"]').type(dataTable.rawTable[1][0]);
+    cy.get('input[name="usernamedfd"]').type(dataTable.rawTable[1][0]);
 })
 
 When('I enter password', function (dataTable) {
